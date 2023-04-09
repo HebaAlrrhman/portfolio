@@ -1,59 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
-  --color1: #af99ff;
-  --color2: #caadff;
-  --color3: #ffc2e2;
-  --color4: #ffadc7;
-  --color5: #ff99b6;
-}
-main .flex {
-  display: flex;
-}
-main img {
-  max-width: 80%;
-  /* margin: auto; */
-}
-main .resum-img {
-  width: 50%;
-}
-
-main .container.flex {
-  border: 1px solid #666;
-  border-radius: 12px;
-  overflow: hidden;
-  margin: 20px;
-  background-color: #fff;
-  box-shadow: 8px 8px 0 rgba(32, 33, 37, 0.1);
-  max-width: 40%;
-}
-
-main img {
-  border-radius: 12px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-main ul {
-  /* list-style: none; */
-}
-
-main h3 {
-  font-size: 3rem;
-  margin-top: 20px;
-}
-
-main li {
-  font-size: 1.8rem;
-}
-main .flex {
-  gap: 30px;
-}
-* {
-  font-family: "Poppins", sans-serif;
-  margin: 0%;
-  padding: 0%;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+  --color1: #2b2d42;
+  --color2: #8d99ae;
+  --color3: #edf2f4;
+  --color4: #ef233c;
 }
 .container {
   max-width: 1140px;
@@ -62,9 +13,19 @@ main .flex {
   padding-right: 20px;
 }
 
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
 html {
   font-size: 10px;
 }
+
+/* START HEADER */
 header {
   background-color: var(--color1);
 }
@@ -92,19 +53,23 @@ header div {
   transition: all 0.3s ease-in-out;
 }
 .navigation a:hover {
-  color: rgb(116, 31, 201);
+  color: var(--color4);
 }
+/* END HEADER */
 
+/* START HERO */
 .hero {
-  width: 100%;
-  min-height: 100vh;
   display: flex;
   align-items: center;
-
-  background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
-
-  background-attachment: fixed;
+  padding: 50px 0;
+  background: rgb(43, 45, 66);
+  background: linear-gradient(
+    222deg,
+    rgba(43, 45, 66, 1) 5%,
+    rgba(141, 153, 174, 1) 100%
+  );
 }
+
 .hero h2 {
   color: white;
   font-size: 3.5rem;
@@ -118,14 +83,31 @@ header div {
   font-weight: 500;
 }
 .hero h3 {
-  color: rgb(193, 140, 243);
+  color: var(--color1);
   font-size: 3rem;
   font-weight: 500;
   margin-top: 10px;
   margin-bottom: 30px;
 }
+
+.hero img {
+  width: 300px;
+  border-radius: 0px 100px 0px 500px;
+  border: 10px solid #fff;
+}
+
+.hero .flex {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 50px;
+}
+
+/* END HERO */
+
+/* START RESUME */
 .resume {
-  background-color: #eee;
+  background-color: #edf2f4;
   padding: 50px 0;
   min-height: 100vh;
 }
@@ -141,9 +123,13 @@ header div {
   font-size: 3.5rem;
   margin-bottom: 20px;
 }
+
+/* END RESUME */
+
+/* START PROJECT */
 .project {
   padding: 50px 0;
-  background-color: #eee;
+  background-color: #edf2f4;
   min-height: 100vh;
 }
 .project p {
@@ -153,17 +139,21 @@ header div {
   font-size: 2rem;
   margin-bottom: 10px;
 }
-
-.card:hover {
-  transform: translatey(-15px);
-  background-color: rgb(231, 223, 238);
-}
 .card {
   transition: all 0.3s;
   border-radius: 12px;
   overflow: hidden;
   margin-bottom: 30px;
 }
+
+.card:hover {
+  transform: translatey(-15px);
+  background-color: rgb(231, 223, 238);
+}
+
+/* END RESUME */
+
+/* START FOOTER */
 .footer {
   background-color: var(--color1);
 }
@@ -201,9 +191,13 @@ header div {
   color: #00405d;
 }
 
-.hero a {
-  color: aliceblue;
+footer span {
+  color: var(--color4);
+  font-weight: 700;
 }
+
+/* END FOOTER */
+
 form input,
 textarea {
   border: 1px solid rgba(0, 0, 0, 0.5);
@@ -214,16 +208,19 @@ form {
   padding: 20px;
   max-width: 600px;
   border-radius: 12px;
-  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
-    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
-    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px,
+    rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px,
+    rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px,
+    rgba(0, 0, 0, 0.07) 0px 32px 64px;
   background-color: #fff;
   font-size: 1.5rem;
 }
 .contact-me {
   padding: 50px 0;
   min-height: 100vh;
-  background-color: #eee;
+  background-color: #edf2f4;
 }
 label {
   display: block;
@@ -251,6 +248,42 @@ input[type="submit"] {
   cursor: pointer;
 }
 
+main .flex {
+  display: flex;
+}
+
+main .flex {
+  border-radius: 12px;
+  min-height: 400px;
+  padding: 30px;
+}
+main .flex div {
+  flex: 1;
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 8px 8px 0 rgba(32, 33, 37, 0.1);
+}
+
+main .flex h3 {
+  font-size: 3rem;
+  margin-top: 20px;
+  border-bottom: 1px solid #777;
+  color: ;
+}
+main ul {
+  list-style-type: square;
+  list-style-position: inside;
+  margin-left: 10px;
+}
+main li {
+  font-size: 1.8rem;
+}
+main .flex {
+  gap: 30px;
+  justify-content: space-evenly;
+}
 @media (max-width: 480px) {
   html {
     font-size: 8px;
@@ -297,12 +330,12 @@ input[type="submit"] {
   }
 }
 
-@media only screen and (min-width: 480px) and (max-width: 1140px) {
+@media only screen and (min-width: 480px) and (max-width: 960px) {
   html {
     font-size: 8px;
   }
   .container {
-    max-width: 1140px;
+    max-width: 960px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -327,5 +360,9 @@ input[type="submit"] {
 
   main img {
     max-width: 100%;
+  }
+
+  main .flex div {
+    flex: auto;
   }
 }
