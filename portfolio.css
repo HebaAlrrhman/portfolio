@@ -7,7 +7,47 @@
   --color4: #ffadc7;
   --color5: #ff99b6;
 }
+main .flex {
+  display: flex;
+}
+main img {
+  max-width: 80%;
+  /* margin: auto; */
+}
+main .resum-img {
+  width: 50%;
+}
 
+main .container.flex {
+  border: 1px solid #666;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 20px;
+  background-color: #fff;
+  box-shadow: 8px 8px 0 rgba(32, 33, 37, 0.1);
+  max-width: 40%;
+}
+
+main img {
+  border-radius: 12px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+main ul {
+  /* list-style: none; */
+}
+
+main h3 {
+  font-size: 3rem;
+  margin-top: 20px;
+}
+
+main li {
+  font-size: 1.8rem;
+}
+main .flex {
+  gap: 30px;
+}
 * {
   font-family: "Poppins", sans-serif;
   margin: 0%;
@@ -18,7 +58,10 @@
 .container {
   max-width: 1140px;
   margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
+
 html {
   font-size: 10px;
 }
@@ -30,7 +73,7 @@ header div {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
+  min-height: 100px;
 }
 .logo {
   text-decoration: none;
@@ -84,27 +127,62 @@ header div {
 .resume {
   background-color: #eee;
   padding: 50px 0;
+  min-height: 100vh;
 }
-.resume h3 {
+.resume h5 {
+  font-size: 2rem;
+}
+.resume p {
+  font-size: 1.5rem;
+}
+.resume h3,
+.project h3,
+.contact-me h3 {
   font-size: 3.5rem;
+  margin-bottom: 20px;
 }
 .project {
   padding: 50px 0;
+  background-color: #eee;
+  min-height: 100vh;
+}
+.project p {
+  font-size: 1.5rem;
+}
+.project h5 {
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
 
 .card:hover {
-  transform: scale(1.1);
+  transform: translatey(-15px);
   background-color: rgb(231, 223, 238);
 }
 .card {
   transition: all 0.3s;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 30px;
 }
 .footer {
+  background-color: var(--color1);
+}
+.footer div {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   color: #fff;
   padding: 2em;
-  background-color: var(--color1);
+}
+.footer p {
+  font-size: 1.3rem;
+  margin-bottom: 0% !important;
+}
+.footer span {
+  font-size: 2rem;
+}
+.active {
+  color: var(--color4) !important;
 }
 
 .social a {
@@ -123,22 +201,30 @@ header div {
   color: #00405d;
 }
 
-.b1 h2 {
-  display: flex;
-  justify-content: center;
-}
-
 .hero a {
   color: aliceblue;
 }
-
-form {
-  border: 2px solid black;
-  padding: 20px;
-  width: 400px;
-  margin: 0 auto;
+form input,
+textarea {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
 }
-
+form {
+  border: 1px solid #fff;
+  padding: 20px;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  background-color: #fff;
+  font-size: 1.5rem;
+}
+.contact-me {
+  padding: 50px 0;
+  min-height: 100vh;
+  background-color: #eee;
+}
 label {
   display: block;
   margin-bottom: 10px;
@@ -160,10 +246,86 @@ input[type="submit"] {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 1.6rem;
   margin-top: 10px;
   cursor: pointer;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 480px) {
+  html {
+    font-size: 8px;
+  }
+  .container {
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .flex {
+    flex-wrap: wrap;
+  }
+  .card {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .footer .flex {
+    justify-content: center;
+    flex-direction: column;
+  }
+  header .container {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  main .resum-img {
+    width: 100%;
+  }
+
+  main .flex {
+    flex-direction: column;
+  }
+
+  main .container.flex {
+    max-width: 100%;
+  }
+  .resum-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  img {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1140px) {
+  html {
+    font-size: 8px;
+  }
+  .container {
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .flex {
+    flex-wrap: wrap;
+  }
+
+  .footer .flex {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  main .container.flex {
+    max-width: 100%;
+  }
+
+  .resum-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main img {
+    max-width: 100%;
+  }
 }

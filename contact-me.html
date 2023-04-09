@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Heba Alrhman</title>
+    <title>Document</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -15,7 +15,6 @@
     />
     <link rel="stylesheet" href="portfolio.css" />
   </head>
-
   <body>
     <header>
       <div class="container flex">
@@ -23,35 +22,44 @@
         <nav class="navigation flex">
           <a href="./resum.html"> Resume</a>
           <a href="./project.html">Project</a>
-          <a href="./contact-me.html">Contact Me</a>
+          <a href="./contact-me.html" class="active">Contact Me</a>
         </nav>
       </div>
     </header>
-
-    <section class="hero">
+    <section class="contact-me">
       <div class="container">
-        <h2>
-          Hi There! <br />
-          <span>I'M HEBA ALRHMAN KHALED</span>
-        </h2>
-        <h3>Developer |</h3>
-        <br />
+        <h3>Contact Me</h3>
 
-        <div class="social">
-          <a
-            href="https://www.facebook.com/profile.php?id=100017753221254&mibextid=ZbWKwL"
-            ><i class="fa-brands fa-facebook"></i
-          ></a>
-          <a href="https://www.linkedin.com/feed/"
-            ><i class="fa-brands fa-linkedin"></i
-          ></a>
-          <a href="https://github.com/hebaAbuaram"
-            ><i class="fa-brands fa-github"></i
-          ></a>
-        </div>
+        <form>
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+          />
+
+          <label for="email">Email:</label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+
+          <label for="message">Message:</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Enter your message"
+          ></textarea>
+
+          <input type="submit" value="Submit" />
+        </form>
       </div>
     </section>
-
     <footer class="footer">
       <div class="container flex">
         <p class="title">Built with &#10084; by <span> Heba ALrhman</span></p>
